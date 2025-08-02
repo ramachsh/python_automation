@@ -14,6 +14,7 @@ def get_topic_details(topic):
     prompt = f"Share some details about {topic}."
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
+        #model="gpt-4.1-nano",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=150
     )
